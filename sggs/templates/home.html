@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SGGS MIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adds space between list items */
+        }
+        .content li {
+            display: inline; /* Ensures items stay inline */
+        }
+        .content a {
+            text-decoration: none;
+            color: #004080;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid #004080;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .content a:hover {
+            background-color: #004080;
+            color: #fff;
+        }
+        footer {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to SGGS MIS</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'students' %}">Students</a>
+        <a href="{% url 'attendance' %}">Attendance</a>
+        <a href="{% url 'hostel' %}">Hostel</a>
+    </nav>
+
+    <div class="content">
+        <h2>Explore our services</h2>
+        <ul>
+            <li><a href="{% url 'students' %}">Manage Students</a></li>
+            <li><a href="{% url 'attendance' %}">Track Attendance</a></li>
+            <li><a href="{% url 'hostel' %}">Hostel Details</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SGGS MIS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
